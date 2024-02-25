@@ -372,18 +372,18 @@ RegisterNetEvent('Cz-farm:server:MilkingCows', function()
     Player.Functions.AddItem(Item, quantity)
 end)
 
--- Processo
+-- Process
 
 RegisterNetEvent('Cz-farm:server:ProcessTomato', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_tomato_harvested'
     local item2 = 'farm_tomato_ketchup'
-    local quantity = 1
+    local quantity = 10
     local GetItem = Player.Functions.GetItemByName(item)
     if GetItem ~= nil then
 
-        if GetItem.amount >= 1 then
+        if GetItem.amount >= 10 then
             Player.Functions.RemoveItem(item, quantity)
             Player.Functions.AddItem(item2, quantity)
         else
@@ -399,11 +399,11 @@ RegisterNetEvent('Cz-farm:server:ProcessWheat', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_wheat_harvested'
     local item2 = 'farm_flour'
-    local quantity = 1
+    local quantity = 10
     local GetItem = Player.Functions.GetItemByName(item)
     if GetItem ~= nil then
 
-        if GetItem.amount >= 1 then
+        if GetItem.amount >= 10 then
             Player.Functions.RemoveItem(item, quantity)
             Player.Functions.AddItem(item2, quantity)
         else
@@ -419,11 +419,11 @@ RegisterNetEvent('Cz-farm:server:ProcessOranges', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_orange'
     local item2 = 'farm_orange_juice'
-    local quantity = 1
+    local quantity = 10
     local GetItem = Player.Functions.GetItemByName(item)
     if GetItem ~= nil then
 
-        if GetItem.amount >= 1 then
+        if GetItem.amount >= 10 then
             Player.Functions.RemoveItem(item, quantity)
             Player.Functions.AddItem(item2, quantity)
         else
@@ -439,11 +439,11 @@ RegisterNetEvent('Cz-farm:server:ProcessPeaches', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_peach'
     local item2 = 'farm_peach_juice'
-    local quantity = 1
+    local quantity = 10
     local GetItem = Player.Functions.GetItemByName(item)
     if GetItem ~= nil then
 
-        if GetItem.amount >= 1 then
+        if GetItem.amount >= 10 then
             Player.Functions.RemoveItem(item, quantity)
             Player.Functions.AddItem(item2, quantity)
         else
@@ -459,11 +459,11 @@ RegisterNetEvent('Cz-farm:server:ProcessApples', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_apple'
     local item2 = 'farm_apple_juice'
-    local quantity = 1
+    local quantity = 10
     local GetItem = Player.Functions.GetItemByName(item)
     if GetItem ~= nil then
 
-        if GetItem.amount >= 1 then
+        if GetItem.amount >= 10 then
             Player.Functions.RemoveItem(item, quantity)
             Player.Functions.AddItem(item2, quantity)
         else
@@ -479,11 +479,11 @@ RegisterNetEvent('Cz-farm:server:ProcessMangoes', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_mango'
     local item2 = 'farm_mango_juice'
-    local quantity = 1
+    local quantity = 10
     local GetItem = Player.Functions.GetItemByName(item)
     if GetItem ~= nil then
 
-        if GetItem.amount >= 1 then
+        if GetItem.amount >= 10 then
             Player.Functions.RemoveItem(item, quantity)
             Player.Functions.AddItem(item2, quantity)
         else
@@ -499,11 +499,11 @@ RegisterNetEvent('Cz-farm:server:ProcessPears', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_pear'
     local item2 = 'farm_pear_juice'
-    local quantity = 1
+    local quantity = 10
     local GetItem = Player.Functions.GetItemByName(item)
     if GetItem ~= nil then
 
-        if GetItem.amount >= 1 then
+        if GetItem.amount >= 10 then
             Player.Functions.RemoveItem(item, quantity)
             Player.Functions.AddItem(item2, quantity)
         else
@@ -519,11 +519,11 @@ RegisterNetEvent('Cz-farm:server:ProcessLemons', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_lemon'
     local item2 = 'farm_lemon_juice'
-    local quantity = 1
+    local quantity = 10
     local GetItem = Player.Functions.GetItemByName(item)
     if GetItem ~= nil then
 
-        if GetItem.amount >= 1 then
+        if GetItem.amount >= 10 then
             Player.Functions.RemoveItem(item, quantity)
             Player.Functions.AddItem(item2, quantity)
         else
@@ -572,7 +572,7 @@ RegisterNetEvent('Cz-farm:server:SellEverything', function()
             end
         end
         Player.Functions.AddMoney("cash", price)
-        TriggerClientEvent('QBCore:Notify', src, "You sell some aliments for $"..price)
+        TriggerClientEvent('QBCore:Notify', src, "You sell some Crops for $"..price)
     else 
 		TriggerClientEvent('QBCore:Notify', src, "You dont/'t have anything to sell..")
 	end

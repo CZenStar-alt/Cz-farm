@@ -2,7 +2,7 @@ fx_version 'cerulean'
 
 game 'gta5'
 
-author 'Marttins#8421 (Cz scripts)  '
+author 'Czen Star (Cz scripts)  '
 
 description 'Cz-farm'
 

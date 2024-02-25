@@ -5,7 +5,7 @@ Config.ShopPedTarget = vector3(2932.23, 4624.04, 47.72) -- Target location for S
 
 Config.WaterLoc = vector3(2954.79, 4672.29, 50.46) -- Location to water fill station
 
-Config.GrowRate = 12 -- In how many seconds it takes to update the plant (At 100% rate plant will grow 1% every update)
+Config.GrowRate = 2 -- In how many seconds it takes to update the plant (At 100% rate plant will grow 1% every update)
 
 Config.FarmField = vector3(2884.94, 4645.27, 48.65) -- Farm flied location
 
@@ -16,7 +16,7 @@ Config.FruitQuantity = math.random(3, 5) -- How many fruits 1 pick give to playe
 
 Config.MilkQuantity = math.random(5, 7) -- How many milk 1 cow give to player
 
-Config.PlantAlimentsQuantity = math.random(25, 30) -- How many aliments 1 plant give to player
+Config.PlantAlimentsQuantity = math.random(25, 30) -- How many Crops 1 plant give to player
 
 Config.ProcessPedTarget = vector3(441.94, 6457.66, 35.86) -- Target Location for Process Ped
 Config.ProcessPed = vector4(441.94, 6457.66, 34.86, 49.13) -- Location for Process Ped

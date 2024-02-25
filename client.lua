@@ -244,17 +244,19 @@ RegisterNetEvent('Cz-farm:client:BuyScissors', function()
 end)
 
 RegisterNetEvent('Cz-farm:client:FillWateringCan', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic3"})
+    exports["rpemotes"]:EmoteCommandStart("watercan")
     QBCore.Functions.Progressbar('name_here', 'FILLING WATER CAN...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        -- Force cancel emote
+        exports["rpemotes"]:EmoteCancel(true)
         TriggerServerEvent('Cz-farm:server:FillWateringCan')
     end)
 end)
+
 
 -- Threads
 
@@ -309,7 +311,7 @@ end)
 
 crop_type = {
     ["crop_stage"] = {
-        stage_1 = {"prop_veg_crop_04_leaf", -1.05},
+        stage_1 = {"prop_veg_crop_03_cab", -1.05},
         stage_2 = {"prop_veg_crop_04_leaf", -1.05},
         stage_3 = {"prop_veg_crop_04_leaf", -1.05},
         stage_4 = {"prop_veg_crop_04_leaf", -1.05},
@@ -445,13 +447,15 @@ RegisterNetEvent('Cz-farm:client:cropOptions', function(args, data)
                     if CurrentPlantInfo.food > 100 then
                         CurrentPlantInfo.food = 100
                     end
-                    TaskStartScenarioInPlace(PlayerPedId(), 'world_human_gardener_plant', 0, false)
+                    exports["rpemotes"]:EmoteCommandStart("fertilizing")
                     QBCore.Functions.Progressbar('add_fertilizante', 'ADDING FERTILIZER...', 5000, false, true, {
                         disableMovement = true,
                         disableCarMovement = true,
                         disableMouse = false,
                         disableCombat = true,
                     }, { }, {}, {}, function()
+                    -- Force cancel emote
+                    exports["rpemotes"]:EmoteCancel(true)
                     TriggerServerEvent("Cz-farm:server:updatePlant", CurrentPlant, CurrentPlantInfo)
                     TriggerServerEvent("Cz-farm:server:RemoveItem", "farm_fertilizer", 1)
                     TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["farm_fertilizer"], "remove", 1) 
@@ -473,13 +477,14 @@ RegisterNetEvent('Cz-farm:client:cropOptions', function(args, data)
                     if CurrentPlantInfo.water > 100 then
                         CurrentPlantInfo.water = 100
                     end
-                    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic3"})
+                    exports["rpemotes"]:EmoteCommandStart("wateringcan")
                     QBCore.Functions.Progressbar('add_water', 'ADDING WATER...', 5000, false, true, {
                         disableMovement = true,
                         disableCarMovement = true,
                         disableMouse = false,
                         disableCombat = true,
                     }, { }, {}, {}, function()
+                    exports["rpemotes"]:EmoteCancel(true)
                     TriggerEvent('animations:client:EmoteCommandStart', {"c"})
                     TriggerServerEvent("Cz-farm:server:updatePlant", CurrentPlant, CurrentPlantInfo)
                     TriggerServerEvent("Cz-farm:server:RemoveItem", "farm_watering_can_full", 1)
@@ -731,13 +736,14 @@ end
 -- Ordenhar vacas
 
 RegisterNetEvent('Cz-farm:client:MilkingCows', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic3"})
+    exports["rpemotes"]:EmoteCommandStart("mechanic4")
     QBCore.Functions.Progressbar('Milking_cow', 'MILKING COW...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
+        exports["rpemotes"]:EmoteCancel(true)
         TriggerServerEvent('Cz-farm:server:MilkingCows')
         ClearPedTasks(PlayerPedId())
         QBCore.Functions.Notify('You have milked an Cow!', 'success', 7500)
@@ -971,7 +977,7 @@ end)
 RegisterNetEvent('Cz-farm:client:MenuProcesso', function()
     exports['qb-menu']:openMenu({
         {
-            header = "Aliments Process",
+            header = "Crops Process",
             isMenuHeader = true,
         },
         {
@@ -1030,7 +1036,7 @@ RegisterNetEvent('Cz-farm:client:MenuProcesso', function()
             }
         },
         {
-            header = "Make Limon Juice",
+            header = "Make Lemon Juice",
             txt = "",
             params = {
                 event = "Cz-farm:client:ProcessLemons",
@@ -1162,7 +1168,7 @@ end)
 
 RegisterNetEvent('Cz-farm:client:ProcessLemons', function()
     TriggerEvent('animations:client:EmoteCommandStart', {"clipboard2"})
-    QBCore.Functions.Progressbar('name_here', 'MAKING LIMON JUICE...', 5000, false, true, {
+    QBCore.Functions.Progressbar('name_here', 'MAKING Lemon JUICE...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,

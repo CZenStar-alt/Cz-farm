@@ -9,8 +9,8 @@ Config.GrowRate = 2 -- In how many seconds it takes to update the plant (At 100%
 
 Config.FarmField = vector3(2884.94, 4645.27, 48.65) -- Farm flied location
 
-Config.WaterQuantity = math.random(50, 100) -- Quantity of water that 1 water can can fill the plant
-Config.FertilizerQuantity = math.random(50, 100) -- Quantity of fertilizer that 1 fertilizer can fill the plant
+Config.WaterQuantity = math.random(80, 100) -- Quantity of water that 1 water can can fill the plant
+Config.FertilizerQuantity = math.random(80, 100) -- Quantity of fertilizer that 1 fertilizer can fill the plant
 
 Config.FruitQuantity = math.random(3, 5) -- How many fruits 1 pick give to player
 
@@ -21,8 +21,8 @@ Config.PlantAlimentsQuantity = math.random(25, 30) -- How many Crops 1 plant giv
 Config.ProcessPedTarget = vector3(441.94, 6457.66, 35.86) -- Target Location for Process Ped
 Config.ProcessPed = vector4(441.94, 6457.66, 34.86, 49.13) -- Location for Process Ped
 
-Config.SellPedTarget = vector3(1469.66, 6549.95, 14.9) -- Target Location for Sell Ped
-Config.SellPed = vector4(1469.66, 6549.95, 13.9, 357.71) -- Location for Sell Ped
+Config.SellPedTarget = vector3(1088.30, 6509.63, 21.07) -- Target Location for Sell Ped
+Config.SellPed = vector4(1088.30, 6509.63, 20.07, 187.73) -- Location for Sell Ped
 
 -- Sell Prices
 Config.TomatoJuicePrice = math.random(15, 25)

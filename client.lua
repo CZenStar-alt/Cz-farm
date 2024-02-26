@@ -47,14 +47,14 @@ RegisterNetEvent('Cz-farm:client:MenuAcessorios', function(data)
         },
         {
             header = "Buy fertilizer",
-            txt = "Price: 10$ per 1",
+            txt = "Price: 100$ per 10",
             params = {
                 event = "Cz-farm:client:BuyFertilizer",
             }
         },
         {
             header = "Buy Empty Water Can",
-            txt = "Price: 10$ per 1",
+            txt = "Price: 100$ per 10",
             params = {
                 event = "Cz-farm:client:BuyWateringCan",
             }
@@ -90,77 +90,77 @@ RegisterNetEvent('Cz-farm:client:SeedsMenu', function()
         },
         {
             header = "Buy tomato seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyTomatoSeed",
             }
         },
         {
             header = "Buy wheat seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyWheatSeed",
             }
         },
         {
             header = "Buy potato seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyPotatoSeed",
             }
         },
         {
             header = "Buy cucumber seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyCucumberSeed",
             }
         },
         {
             header = "Buy onion seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyOnionSeed",
             }
         },
         {
             header = "Buy cabbage seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyCabbageSeed",
             }
         },
         {
             header = "Buy lettuce seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyLettuceSeed",
             }
         },
         {
             header = "Buy carrot seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyCarrotSeed",
             }
         },
         {
             header = "Buy beet seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyBeetrootSeed",
             }
         },
         {
             header = "Buy turnip seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyTurnipSeed",
             }
         },
         {
             header = "Buy mushrooms seeds",
-            txt = "Price: 20$ per 1",
+            txt = "Price: 200$ per 10",
             params = {
                 event = "Cz-farm:client:BuyMushroomSeed",
             }
@@ -315,7 +315,7 @@ crop_type = {
         stage_2 = {"prop_veg_crop_04_leaf", -1.05},
         stage_3 = {"prop_veg_crop_04_leaf", -1.05},
         stage_4 = {"prop_veg_crop_04_leaf", -1.05},
-        stage_5 = {"prop_veg_crop_04_leaf", -1.05},
+        stage_5 = {"prop_veg_crop_02", -1.05},
         stage_6 = {"prop_veg_crop_02", -1.05}
     }
 }
@@ -485,7 +485,7 @@ RegisterNetEvent('Cz-farm:client:cropOptions', function(args, data)
                         disableCombat = true,
                     }, { }, {}, {}, function()
                     exports["rpemotes"]:EmoteCancel(true)
-                    TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+                    exports["rpemotes"]:EmoteCancel(true)
                     TriggerServerEvent("Cz-farm:server:updatePlant", CurrentPlant, CurrentPlantInfo)
                     TriggerServerEvent("Cz-farm:server:RemoveItem", "farm_watering_can_full", 1)
                     TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["farm_watering_can_full"], "remove", 1)
@@ -761,10 +761,10 @@ Citizen.CreateThread(function()
     
     local blip = AddBlipForCoord(2884.94, 4645.27, 48.65)
     
-        SetBlipSprite (blip, 88)
+        SetBlipSprite (blip, 417)
         SetBlipDisplay(blip, 2)
-        SetBlipScale  (blip, 0.9)
-        SetBlipColour (blip, 37)
+        SetBlipScale  (blip, 0.7)
+        SetBlipColour (blip, 25)
         SetBlipAsShortRange(blip, true)
     
         BeginTextCommandSetBlipName("STRING")
@@ -773,10 +773,10 @@ Citizen.CreateThread(function()
 
     local blip = AddBlipForCoord(2931.6, 4624.6, 48.72)
     
-        SetBlipSprite (blip, 88)
+        SetBlipSprite (blip, 628)
         SetBlipDisplay(blip, 2)
-        SetBlipScale  (blip, 0.9)
-        SetBlipColour (blip, 37)
+        SetBlipScale  (blip, 0.7)
+        SetBlipColour (blip, 25)
         SetBlipAsShortRange(blip, true)
     
         BeginTextCommandSetBlipName("STRING")
@@ -785,10 +785,10 @@ Citizen.CreateThread(function()
 
     local blip = AddBlipForCoord(2386.51, 4716.06, 33.65)
     
-        SetBlipSprite (blip, 88)
+        SetBlipSprite (blip, 836)
         SetBlipDisplay(blip, 2)
-        SetBlipScale  (blip, 0.9)
-        SetBlipColour (blip, 37)
+        SetBlipScale  (blip, 0.7)
+        SetBlipColour (blip, 25)
         SetBlipAsShortRange(blip, true)
     
         BeginTextCommandSetBlipName("STRING")
@@ -797,10 +797,10 @@ Citizen.CreateThread(function()
 
     local blip = AddBlipForCoord(2452.17, 4751.59, 34.3)
     
-        SetBlipSprite (blip, 89)
+        SetBlipSprite (blip, 570)
         SetBlipDisplay(blip, 2)
-        SetBlipScale  (blip, 0.9)
-        SetBlipColour (blip, 37)
+        SetBlipScale  (blip, 0.7)
+        SetBlipColour (blip, 25)
         SetBlipAsShortRange(blip, true)
     
         BeginTextCommandSetBlipName("STRING")
@@ -809,22 +809,22 @@ Citizen.CreateThread(function()
 
     local blip = AddBlipForCoord(441.94, 6457.66, 35.86)
     
-        SetBlipSprite (blip, 88)
+        SetBlipSprite (blip, 751)
         SetBlipDisplay(blip, 2)
-        SetBlipScale  (blip, 0.9)
-        SetBlipColour (blip, 37)
+        SetBlipScale  (blip, 0.7)
+        SetBlipColour (blip, 25)
         SetBlipAsShortRange(blip, true)
     
         BeginTextCommandSetBlipName("STRING")
         AddTextComponentString('Farm Process')
         EndTextCommandSetBlipName(blip)
 		
-    local blip = AddBlipForCoord(1469.82, 6550.53, 14.9)
+    local blip = AddBlipForCoord(1088.30, 6509.63, 21.07)
     
-        SetBlipSprite (blip, 88)
+        SetBlipSprite (blip, 205)
         SetBlipDisplay(blip, 2)
-        SetBlipScale  (blip, 0.9)
-        SetBlipColour (blip, 37)
+        SetBlipScale  (blip, 0.7)
+        SetBlipColour (blip, 25)
         SetBlipAsShortRange(blip, true)
     
         BeginTextCommandSetBlipName("STRING")
@@ -1046,11 +1046,11 @@ RegisterNetEvent('Cz-farm:client:MenuProcesso', function()
 end)
 
 CreateThread(function()
-    RequestModel(`a_m_m_farmer_01`)
-      while not HasModelLoaded(`a_m_m_farmer_01`) do
+    RequestModel(`a_m_m_hillbilly_01`)
+      while not HasModelLoaded(`a_m_m_hillbilly_01`) do
       Wait(1)
     end
-      farmProcess = CreatePed(2, `a_m_m_farmer_01`, Config.ProcessPed, false, false)
+      farmProcess = CreatePed(2, `a_m_m_hillbilly_01`, Config.ProcessPed, false, false)
       SetPedFleeAttributes(farmProcess, 0, 0)
       SetPedDiesWhenInjured(farmProcess, false)
       TaskStartScenarioInPlace(farmProcess, "missheistdockssetup1clipboard@base", 0, true)
@@ -1076,120 +1076,138 @@ CreateThread(function()
 end)
 
 RegisterNetEvent('Cz-farm:client:ProcessTomato', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"clipboard2"})
+    exports["rpemotes"]:EmoteCommandStart("box")
     QBCore.Functions.Progressbar('name_here', 'MAKING TOMATO JUICE...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        exports["rpemotes"]:EmoteCancel(true)
         TriggerServerEvent('Cz-farm:server:ProcessTomato')
+        Citizen.Wait(500) -- Wait for 5 seconds for the processing to complete
+        TriggerEvent('Cz-farm:client:MenuProcesso') -- Reopen the MenuProcesso after processing tomato
     end)
 end)
 
+
 RegisterNetEvent('Cz-farm:client:ProcessWheat', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"clipboard2"})
+    exports["rpemotes"]:EmoteCommandStart("box")
     QBCore.Functions.Progressbar('name_here', 'MAKING WHEAT FLOUR...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        exports["rpemotes"]:EmoteCancel(true)
         TriggerServerEvent('Cz-farm:server:ProcessWheat')
+        Citizen.Wait(500) -- Wait for 5 seconds for the processing to complete
+        TriggerEvent('Cz-farm:client:MenuProcesso') -- Reopen the MenuProcesso after processing
     end)
 end)
 
 RegisterNetEvent('Cz-farm:client:ProcessOranges', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"clipboard2"})
+    exports["rpemotes"]:EmoteCommandStart("box")
     QBCore.Functions.Progressbar('name_here', 'MAKING ORANGE JUICE...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        exports["rpemotes"]:EmoteCancel(true)
         TriggerServerEvent('Cz-farm:server:ProcessOranges')
+        Citizen.Wait(500) -- Wait for 5 seconds for the processing to complete
+        TriggerEvent('Cz-farm:client:MenuProcesso') -- Reopen the MenuProcesso after processing
     end)
 end)
 
 RegisterNetEvent('Cz-farm:client:ProcessPeaches', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"clipboard2"})
+    exports["rpemotes"]:EmoteCommandStart("box")
     QBCore.Functions.Progressbar('name_here', 'MAKING PEACH JUICE...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        exports["rpemotes"]:EmoteCancel(true)
         TriggerServerEvent('Cz-farm:server:ProcessPeaches')
+        Citizen.Wait(500) -- Wait for 5 seconds for the processing to complete
+        TriggerEvent('Cz-farm:client:MenuProcesso') -- Reopen the MenuProcesso after processing
     end)
 end)
 
 RegisterNetEvent('Cz-farm:client:ProcessApples', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"clipboard2"})
+    exports["rpemotes"]:EmoteCommandStart("box")
     QBCore.Functions.Progressbar('name_here', 'MAKING APPLE JUICE...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        exports["rpemotes"]:EmoteCancel(true)
         TriggerServerEvent('Cz-farm:server:ProcessApples')
+        Citizen.Wait(500) -- Wait for 5 seconds for the processing to complete
+        TriggerEvent('Cz-farm:client:MenuProcesso') -- Reopen the MenuProcesso after processing
     end)
 end)
 
 RegisterNetEvent('Cz-farm:client:ProcessMangoes', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"clipboard2"})
+    exports["rpemotes"]:EmoteCommandStart("box")
     QBCore.Functions.Progressbar('name_here', 'MAKING MANGO JUICE...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        exports["rpemotes"]:EmoteCancel(true)
         TriggerServerEvent('Cz-farm:server:ProcessMangoes')
+        Citizen.Wait(500) -- Wait for 5 seconds for the processing to complete
+        TriggerEvent('Cz-farm:client:MenuProcesso') -- Reopen the MenuProcesso after processing
     end)
 end)
 
 RegisterNetEvent('Cz-farm:client:ProcessPears', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"clipboard2"})
+    exports["rpemotes"]:EmoteCommandStart("box")
     QBCore.Functions.Progressbar('name_here', 'MAKING PEAR JUICE...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        exports["rpemotes"]:EmoteCancel(true)
         TriggerServerEvent('Cz-farm:server:ProcessPears')
+        Citizen.Wait(500) -- Wait for 5 seconds for the processing to complete
+        TriggerEvent('Cz-farm:client:MenuProcesso') -- Reopen the MenuProcesso after processing
     end)
 end)
 
 RegisterNetEvent('Cz-farm:client:ProcessLemons', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"clipboard2"})
+    exports["rpemotes"]:EmoteCommandStart("box")
     QBCore.Functions.Progressbar('name_here', 'MAKING Lemon JUICE...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        exports["rpemotes"]:EmoteCancel(true)
         TriggerServerEvent('Cz-farm:server:ProcessLemons')
+        Citizen.Wait(500) -- Wait for 5 seconds for the processing to complete
+        TriggerEvent('Cz-farm:client:MenuProcesso') -- Reopen the MenuProcesso after processing
     end)
 end)
 
 -- Venda
 
 RegisterNetEvent('Cz-farm:client:SellEverything', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"clipboard2"})
+    exports["rpemotes"]:EmoteCommandStart("argue3")
     QBCore.Functions.Progressbar('name_here', 'MAKING A DEAL...', 5000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function()
-        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        Citizen.Wait(500) -- Wait for 5 seconds for the processing to complete
+        exports["rpemotes"]:EmoteCancel(true)
     TriggerServerEvent('Cz-farm:server:SellEverything')
     end)
 end)

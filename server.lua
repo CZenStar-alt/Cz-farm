@@ -7,8 +7,8 @@ RegisterNetEvent('Cz-farm:server:BuyFertilizer', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_fertilizer'
     local money = 'bank'
-    local quantity = 1
-    local price = 10
+    local quantity = 10
+    local price = 100
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -31,8 +31,8 @@ RegisterNetEvent('Cz-farm:server:BuyTomatoSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_tomato'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -43,8 +43,8 @@ RegisterNetEvent('Cz-farm:server:BuyWheatSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_wheat'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -55,8 +55,8 @@ RegisterNetEvent('Cz-farm:server:BuyPotatoSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_potato'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -67,8 +67,8 @@ RegisterNetEvent('Cz-farm:server:BuyCucumberSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_cucumber'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -79,8 +79,8 @@ RegisterNetEvent('Cz-farm:server:BuyOnionSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_onion'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -91,8 +91,8 @@ RegisterNetEvent('Cz-farm:server:BuyCabbageSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_cabbage'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -103,8 +103,8 @@ RegisterNetEvent('Cz-farm:server:BuyLettuceSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_lettuce'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -115,8 +115,8 @@ RegisterNetEvent('Cz-farm:server:BuyCarrotSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_carrot'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -127,8 +127,8 @@ RegisterNetEvent('Cz-farm:server:BuyBeetrootSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_beetrootseed'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -139,8 +139,8 @@ RegisterNetEvent('Cz-farm:server:BuyTurnipSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_turnip'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -151,8 +151,8 @@ RegisterNetEvent('Cz-farm:server:BuyMushroomSeed', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'farm_mushrooms'
     local money = 'bank'
-    local quantity = 1
-    local price = 20
+    local quantity = 10
+    local price = 200
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -163,8 +163,8 @@ RegisterNetEvent('Cz-farm:server:BuyWateringCan', function()
     local Player = QBCore.Functions.GetPlayer(src)
     local item = 'watering_can'
     local money = 'bank'
-    local quantity = 1
-    local price = 10
+    local quantity = 10
+    local price = 100
 
     Player.Functions.RemoveMoney(money, price)
     Player.Functions.AddItem(item, quantity)
@@ -188,7 +188,7 @@ RegisterNetEvent('Cz-farm:server:FillWateringCan', function()
     local watering_can = Player.Functions.GetItemByName('watering_can')
     local item = 'watering_can'
     local item2 = 'farm_watering_can_full'
-    local quantity = 1
+    local quantity = 10
 
     if watering_can ~= nil then
 
